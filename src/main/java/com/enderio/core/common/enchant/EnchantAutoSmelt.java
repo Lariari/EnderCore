@@ -1,7 +1,7 @@
 package com.enderio.core.common.enchant;
 
-import com.enderio.core.EnderCore;
-import com.enderio.core.api.common.enchant.IAdvancedEnchant;
+//import com.enderio.core.EnderCore;
+//import com.enderio.core.api.common.enchant.IAdvancedEnchant;
 import com.enderio.core.common.config.ConfigHandler;
 
 import cpw.mods.fml.common.event.FMLInterModComms;
@@ -10,7 +10,7 @@ import net.minecraft.enchantment.EnumEnchantmentType;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
-public class EnchantAutoSmelt extends Enchantment implements IAdvancedEnchant {
+public class EnchantAutoSmelt extends Enchantment /*implements IAdvancedEnchant*/ {
   public static final EnchantAutoSmelt INSTANCE = new EnchantAutoSmelt(ConfigHandler.enchantIDAutoSmelt);
 
   private EnchantAutoSmelt(int id) {
@@ -47,10 +47,10 @@ public class EnchantAutoSmelt extends Enchantment implements IAdvancedEnchant {
     return ConfigHandler.allowAutoSmelt;
   }
 
-  @Override
+  /*@Override
   public String[] getTooltipDetails(ItemStack stack) {
     return new String[] { EnderCore.lang.localize("enchantment.autosmelt.tooltip", false) };
-  }
+  }*/
 
   public void register() {
     if (ConfigHandler.allowAutoSmelt) {
