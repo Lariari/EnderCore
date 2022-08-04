@@ -1,7 +1,7 @@
 package com.enderio.core.common.enchant;
 
-import com.enderio.core.EnderCore;
-import com.enderio.core.api.common.enchant.IAdvancedEnchant;
+//import com.enderio.core.EnderCore;
+//import com.enderio.core.api.common.enchant.IAdvancedEnchant;
 import com.enderio.core.common.config.ConfigHandler;
 
 import net.minecraft.enchantment.Enchantment;
@@ -10,7 +10,7 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.event.FMLInterModComms;
 
-public class EnchantXPBoost extends Enchantment implements IAdvancedEnchant {
+public class EnchantXPBoost extends Enchantment /*implements IAdvancedEnchant*/ {
   public static final EnchantXPBoost INSTANCE = new EnchantXPBoost(ConfigHandler.enchantIDXPBoost);
 
   private EnchantXPBoost(int id) {
@@ -47,10 +47,10 @@ public class EnchantXPBoost extends Enchantment implements IAdvancedEnchant {
     return ConfigHandler.allowXPBoost;
   }
 
-  @Override
+  /*@Override
   public String[] getTooltipDetails(ItemStack stack) {
     return new String[] { EnderCore.lang.localize("enchantment.xpboost.tooltip", false) };
-  }
+  }*/
 
   public void register() {
     if (ConfigHandler.allowXPBoost) {
